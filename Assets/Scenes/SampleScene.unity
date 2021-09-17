@@ -1238,6 +1238,7 @@ GameObject:
   - component: {fileID: 957410780}
   - component: {fileID: 957410779}
   - component: {fileID: 957410778}
+  - component: {fileID: 957410782}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1359,6 +1360,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957410776}
   m_CullTransparentMesh: 1
+--- !u!114 &957410782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957410776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0ab818c70078d44be281f2558f0733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: c1a2db2a550cbe94ca2dceb606971d6b, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,8 +1787,8 @@ MonoBehaviour:
   panelGameOver: {fileID: 883896926}
   levels:
   - {fileID: 1718941465428645741, guid: 79d5d2c3eabd41645b4985cfb0f1229a, type: 3}
-  - {fileID: 9117234728551802386, guid: e01ff7b9a7d9dc24dac0d6af45ec3d93, type: 3}
-  - {fileID: 5297687856953662138, guid: b9703b150119c294d9f3941f11e7ef7d, type: 3}
+  - {fileID: 4216012605514114121, guid: e01ff7b9a7d9dc24dac0d6af45ec3d93, type: 3}
+  - {fileID: 5102461550179172968, guid: 3d73c37476cbefe4c9d774fb8105e012, type: 3}
 --- !u!4 &1217541857
 Transform:
   m_ObjectHideFlags: 0
@@ -1799,7 +1813,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c1a2db2a550cbe94ca2dceb606971d6b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd2ac3ce8cb0c93489b119f69cbf3f87, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2002,7 +2016,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ae709cbf774d5644eb3f43bf2ee2d891, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2300,7 +2314,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2

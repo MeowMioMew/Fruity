@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     public void PlayClick()
     {
         SwitchState(State.INIT);
-        _source.Play();
+       
     }
 
     void Start()
@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
                 break;
 
             case State.GAMEOVER:
+                _source.Play();
                 if (Score > PlayerPrefs.GetInt("highscore"))
                 {
                     PlayerPrefs.SetInt("highscore", Score);

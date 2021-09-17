@@ -9,10 +9,12 @@ public class Fruit : MonoBehaviour
     float originalY;
 
     public float floatStrength = 1;
+    AudioSource _source;
 
     void Start()
     {
         this.originalY = this.transform.position.y;
+        _source = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -21,8 +23,8 @@ public class Fruit : MonoBehaviour
         GameManager.Instance.Score += points;
         if (hits <= 0)
         {
-            Destroy(gameObject);
-          
+            StartCoroutine(Break(.4f));
+
         }
  
     }
@@ -32,5 +34,12 @@ public class Fruit : MonoBehaviour
         transform.position = new Vector3(transform.position.x,
             originalY + ((float)System.Math.Sin(Time.time) * floatStrength),
             transform.position.z);
+    }
+
+    public IEnumerator Break(float t)
+    {
+        _source.Play();
+        yield return new WaitForSeconds(t);
+        Destroy(gameObject);
     }
 }
